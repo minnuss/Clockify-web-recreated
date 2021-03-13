@@ -298,6 +298,8 @@ input:checked+.slider:before {
 }
 
 .content_box_title {
+    text-align: left;
+    margin-left: 40px;
     font-size: 1.1rem;
     color: var(--primarititle);
     margin-bottom: 15px;
@@ -498,8 +500,8 @@ input:checked+.slider:before {
 }
 
 .customer_box {
-    max-width: 255px;
-    min-width: 255px;
+    max-width: 275px;
+    min-width: 270px;
     margin: 10px;
     padding: 15px;
     box-shadow: 0px 2px 6px 0 #0289d12f;
@@ -513,7 +515,7 @@ input:checked+.slider:before {
 }
 
 .customer_title {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     margin-bottom: 10px;
 }
 
@@ -524,6 +526,7 @@ input:checked+.slider:before {
 
 .customer_msg {
     font-size: 0.75rem;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
@@ -684,7 +687,7 @@ input:checked+.slider:before {
     display: none;
 }
 
-/* nav mobile */
+/* NAV MOBILE */
 
 @media (max-width: 1010px) {
 
@@ -699,7 +702,6 @@ input:checked+.slider:before {
 
     header {
         width: 100%;
-        /* display: none; */
         flex-direction: column;
         justify-content: center;
     }
@@ -720,17 +722,26 @@ input:checked+.slider:before {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        display: none;
+        visibility: hidden;
+        height: 0;
+        font-size: 0%;
+        transition: font-size 0.3s ease-in;
     }
 
     .left-links.active {
         padding: 40px 0 0;
         display: flex;
+        height: auto;
+        visibility: visible;
+        font-size: 1rem;
     }
 
     .right-links.active {
         padding: 0 0 40px;
         display: flex;
+        height: auto;
+        visibility: visible;
+        font-size: 1rem;
         border-bottom: 1px solid var(--primaryblue);
     }
 
@@ -759,7 +770,7 @@ input:checked+.slider:before {
     /* HAMB BUTTON */
 
     .hamb-menu-btn-line.line1.active {
-        transform: rotate(405deg) translate(7px, 7px);
+        transform: rotate(45deg) translate(7px, 7px);
     }
 
     .hamb-menu-btn-line.line2.active {
@@ -767,7 +778,7 @@ input:checked+.slider:before {
     }
 
     .hamb-menu-btn-line.line3.active {
-        transform: rotate(-405deg) translate(8px, -8px);
+        transform: rotate(-45deg) translate(8px, -8px);
     }
 
     .hamb-menu-btn-box {
@@ -876,6 +887,7 @@ input:checked+.slider:before {
     }
 
     .content_box_title {
+        margin-left: 0;
         text-align: left;
         padding-left: 40px;
         font-size: 1rem;
@@ -1049,11 +1061,11 @@ input:checked+.slider:before {
     /* FEEDBACK SECTION */
 
     .customer_box {
-        animation: moving-left 60s infinite;
+        animation: moving-left 55s infinite;
     }
 
     .cust-feedback-logo-expand-img {
-        animation: moving-left 45s infinite;
+        animation: moving-left 55s infinite;
     }
 }
 
@@ -1069,12 +1081,31 @@ input:checked+.slider:before {
 
 @media (max-width: 530px) {
 
+    /* HERO SECTION */
+    .btn-wide {
+        padding: 18px 5px 14px 5px;
+        font-size: 0.9rem;
+    }
+
+    /* FEATURES SECTION */
+
+    .btn-features {
+        padding: 18px 35px 18px 31px;
+        font-size: 1rem;
+        color: white;
+    }
+
     /* ADVANTAGAES SECTION */
 
     .card {
-        max-width: 350px;
-        max-height: 270px;
+        max-width: 330px;
+        max-height: 260px;
         padding: 15px;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        line-height: 25px;
     }
 
     /* PRICE SECTION */
@@ -1115,15 +1146,15 @@ input:checked+.slider:before {
         text-align: center;
     }
 
+    .btn-wide-mobile {
+        padding: 18px 35px 14px 31px;
+    }
+
     /* FOOTER */
 
     .links-box {
         width: 90%;
         flex-wrap: wrap;
-    }
-
-    .footer_product {
-        /* width: 60%; */
     }
 
     .links-box div {
